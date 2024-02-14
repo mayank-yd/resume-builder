@@ -20,7 +20,6 @@ def accept(request):
 
         profile = Profile(name=name, phone=phone, email=email, school=school, degree=degree, university=university, skills=skills, summary=summary, workexperince=workexperince)
         profile.save()
-
     return render(request,"accept.html")
 
 def resume(request,id):
@@ -39,4 +38,5 @@ def resume(request,id):
 
 def list(request):
     profile=Profile.objects.all()
+    pro=4
     return render(request, "list.html", {'profile': profile})
